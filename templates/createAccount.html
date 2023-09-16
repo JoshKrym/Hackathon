@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="createAccount.css">
+</head>
+    <style>
+        body {
+            margin: 0;                 /* Reset default margin */
+            display: flex;             /* Convert body to flex container */
+            justify-content: center;   /* Center horizontally */
+            align-items: center;       /* Center vertically */
+            font-family: Arial, sans-serif; /* Optional: Set a font family */
+            height: 100vh;             /* Set body height to full viewport height */
+        }
+
+        .title {
+            font-size: 70px;
+            position: absolute;
+            top: 28%; /* Adjust this value to control vertical position */
+            left: 25%; /* Adjust this value to control horizontal position */
+        }
+
+        .userLabel, .passLabel{
+            font-size: 24px;
+            position: absolute;
+            left: 32%; /* Adjust this value to control horizontal position */
+        }
+
+        .userLabel{
+            bottom: 50%; /* Adjust this value to control vertical position */    
+        }
+        .passLabel{
+            bottom: 35%; /* Adjust this value to control vertical position */
+        }
+
+        .rectangleUser, .rectanglePass {
+            width: 350px; /* Set the width of the rectangle */
+            height: 50px; /* Set the height of the rectangle */
+            border: 2px solid black; /* Add a black border */
+            position: absolute;
+            left: 32%;
+        }
+        .rectangleUser{
+            bottom: 43%;
+        }
+        .rectanglePass{
+            bottom: 28%;
+        }
+        
+        .login{
+            font-size: 20px;
+            position: absolute;
+            left: 35%;
+            bottom: 15%;
+        }
+    </style>
+<body>
+
+    <div class="title">
+        Create Account
+    </div>
+
+    </body>
+
+    <div class="userLabel">
+        Username
+    </div>
+    <div class="passLabel">
+        Password
+    </div>
+
+    <div class="rectangleUser">
+    </div>
+    <div class="rectanglePass">
+    </div>
+
+    <div class="login">
+        Already have an account? <a href="login.html">Sign in</a>
+    </div>
+
+</body>
+</html>
