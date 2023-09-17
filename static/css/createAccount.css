@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Nunito&display=swap');
+        body {
+            margin: 0;                 /* Reset default margin */
+            display: flex;             /* Convert body to flex container */
+            justify-content: center;   /* Center horizontally */
+            align-items: center;       /* Center vertically */
+            font-family: Arial, sans-serif; /* Optional: Set a font family */
+            height: 100vh;             /* Set body height to full viewport height */
+        }
+
+        .bigGreyRec {
+            width: 100%; /* Cover the entire width of the viewport */
+            height: 100%; /* Cover the entire height of the viewport */
+            background-color: rgba(74, 67, 67, 0.203); /* Set the background color to light grey */
+        }
+
+        .lessBigWhiteRec{
+            display: flex;
+            flex-direction:column;
+            align-items: center;
+            width: 400px; /* Set the width of the rectangle */
+            height: fit-content; /* Set the height of the rectangle */
+            background-color: white; /* Add a black border */
+            position: absolute;
+            left: 50%; /* Center the element horizontally */
+            transform: translateX(-50%); /* Center it precisely */
+            top: 10%;
+            border-radius: 10px; /* Add this line to set rounded corners (optional) */
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add a shadow */
+            }
+
+        .title {
+            font-size: 2.5em;
+            font-family: 'Nunito', sans-serif;
+            margin-bottom: 40px;
+            margin-top: 30px;
+        }
+
+        .userLabel, .passLabel{
+            font-size: 1.3em;
+            font-family: 'Lato', sans-serif;
+            align-self:flex-start;
+            margin-left:22.5px;
+            
+        }
+
+        #Username, #Password {
+            background: #F5F5F5;
+            width: 350px; /* Set the width of the rectangle */
+            font-size: 42px;
+            border: 2px solid black; /* Add a black border */
+            font-family: 'Lato', sans-serif;
+            margin-bottom: 10px;
+
+        }
+        
+        .loginRectangle {
+            display: flex;  /* Convert the container to a flex container */
+            justify-content: center; /* Center child elements horizontally */
+            align-items: center; /* Center child elements vertically */
+            margin-top: 5px;
+            margin-bottom: 30px;
+            /* Your existing styles: */
+            width: 350px;
+            height: 48px;
+            background-color: #6b42e8;
+            border-radius: 20px; /* Add this line to set rounded corners (optional) */
+            font-size: 24px;
+            font-family: 'Lato', sans-serif;
+            color: rgb(255, 255, 255);
+        }
+        .loginRectangle button {
+            font-size: 24px;
+            font-family: 'Lato', sans-serif;
+            color: rgb(255, 255, 255);
+            width: 100%;
+            height: 100%;
+            border: none;
+            background: transparent;
+            cursor: pointer;  /* Makes it clear it's a clickable button */
+            outline: none;  /* Removes the blue outline when the button is clicked or focused */
+            text-align: center;  /* Optional: If you want to make sure the text is centered */
+        }
+
+        /* Changes the rectangle color when hovered */
+        .loginRectangle:hover {
+            background-color: #9c8ecd;  /* This is a slightly lighter shade of the original color for demonstration. Adjust as needed. */
+            color: #ccc
+        }
+
+        /* Changes the button text color when hovered */
+        .loginRectangle button:hover {
+            color: #ccc;  /* This is a slightly darker shade of white for demonstration. Adjust as needed. */
+        }
+
+
+        .signUp{
+            font-size: 20px;
+            position: absolute;
+            left: 50%; /* Center the element horizontally */
+            transform: translateX(-50%); /* Center it precisely */
+            bottom: 30%;
+        }
+        .signUpLink:hover{
+            color: #ccc
+        }
+
