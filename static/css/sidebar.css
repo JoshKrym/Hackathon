@@ -31,7 +31,7 @@ html, body {
 
 
 
-#SideMenu button{
+#SideMenu button, #logout{
     text-decoration: none;
     width: 100%;
     background-color: white;
@@ -41,6 +41,11 @@ html, body {
 }
 
 
-#SideMenu button:hover{
+#SideMenu button:hover, #logout:hover{
     background-color: lightgrey;
+}
+
+#logout {
+    position: absolute;
+    bottom: 0px;
 }

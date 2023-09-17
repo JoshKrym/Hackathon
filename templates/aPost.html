@@ -1,0 +1,13 @@
+<div class = "post">
+    <h1>{{ title }}</h1>
+    <div class = "description">
+        <img src="{{ url_for('static', filename = 'images/'+Posts[title]['image']) }}"></img>
+        <p>{{ Posts["description"] }}</p>
+        <form action="/sendMessage" method="post">
+            <input type="hidden" name="user" value="{{User}}" />
+            <input type="hidden" name="message" value="Hello, I'm Interested in your {{title}} job, and I would love to learn more." />
+            <input type="submit" value = "I'm Interested" />
+        </form>
+        
+    </div>
+</div>

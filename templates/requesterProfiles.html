@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <!--<link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}" />
-    <link rel="stylesheet" href="{{url_for('static', filename='css/sidebar.css')}}" />-->
-    <link rel="stylesheet" href="../static/css/styles.css" />
-    <link rel="stylesheet" href="../static/css/sidebar.css" />
-    <link rel="stylesheet" href="../static/css/home.css"
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Nunito&display=swap');
 
@@ -21,9 +6,6 @@
     height: 100px;         /* Set the height of the circle */
     border-radius: 50%;    /* This will make it a circle */
     border: 0.01px solid #000;  /* Thin border. Change #000 to any color you prefer */
-    position: relative;
-    margin-top: 40px;
-    margin-left: 130px;
     }
     .circle-image {
     border-radius: 50%; 
@@ -34,38 +16,40 @@
     }
     #companyName{
         font-size: 1.125em;
-        position: relative;
-        margin-left: 135px;
         font-family: 'Nunito', sans-serif;
     }
 
-    #companyDescription{
+    #Type{
         font-size: 1em;
-        position: relative;
-        margin-left: 136px;
         font-family: 'Nunito', sans-serif;    
         color: #000000cb;
     }
 
-    #messageRec{
-        width: 6em; /* Set the width of the rectangle */
-        height: 2em; /* Set the height of the rectangle */
-        position: relative;
-        margin-bottom: 0px;
-        margin-left: 400px;
-        background-color: white;
-        }
     #message{
+        background-color: white;
         font-size: 1.125em;
-        position: relative;
         font-family: 'Lato', sans-serif;
         color: black;
-    }
-    #messageRec:hover #message {
-      color: white;
-    }
-    #messageRec:hover {
+        margin-left: 40px;
+        margin-bottom: 20px;
+        align-self:flex-end;
+        height: fit-content;
+        padding: 5px;
+        }
+    #message:hover {
         background-color: rgb(210, 210, 210); 
+    }
+    #companyDetails {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #companyDescription{
+        font-size: 1.125em;
+        font-family: 'Lato', sans-serif;
+        color: black;
+        margin: 10px 20px 10px 40px;
+        overflow:hidden;
     }
 
     .clear-box {
@@ -73,11 +57,14 @@
         background-color: transparent; 
     }
 
-    #box1 {
+    #Profile {
         width: 100%;
         height: 200px;
         border-bottom-style: solid;
         border-bottom-width: thin;
+        display: flex;
+        margin-left: 30px;
+        align-items: center;
     }
     #box2{
         width: 70%;
@@ -126,57 +113,36 @@
     }
 
 </style>
-<body>
-    <div id = "page">
-
-        <a href="/post.html"><img src="../static/images/Post.png" /></a>
-
-        <div class="clear-box" id="box1">
-            <div class="clear-box" id="box2">
-                <div id="circle">
-                    <img src="../static/images/zucc.jpg" class="circle-image"></img>
-                </div>
-                <div id="companyName">
-                    Cancer Cure
-                </div>
-                <button id="messageRec">
-                    <div id="message">
-                        Message
+        <div class="clear-box" id="Profile">
+            <div id = "companyDetails">
+                <img src="../static/images/zucc.jpg" id="circle"></img>
+                <div style="display: flex;">
+                    <div>
+                        <div id="companyName">
+                            Cancer Cure
+                        </div>
+                        <div id="Type">
+                            Requester
+                        </div>
                     </div>
-                </button>
-                <div id="companyDescription">
-                    We cure cancer (duh)
+                    <button id="message">
+                        Message
+                    </button>
                 </div>
             </div>
-            <div class="clear-box" id="box3">
-                
-            </div>
+            <p id="companyDescription">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
             
         </div>
         <div id = "content">
             <div id = "feed">
                 <div id = "posts">
-                    <div class = "post">
-                        <h1>Lorem Ipsum</h1>
-                        <div class = "description">
-                            <img src="../static/images/business_cover.jpeg" id="test"></img>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        </div>
-                    </div>
-                    <div class = "post">
-                        <h1>Lorem Ipsum</h1>
-                        <div class = "description">
-                            <img src="../static/images/business_cover.jpeg" id="test"></img>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        </div>
-                    </div>
-                    <div class = "post">
-                        <h1>Lorem Ipsum</h1>
-                        <div class = "description">
-                            <img src="../static/images/business_cover.jpeg" id="test"></img>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        </div>
-                    </div>
+                    {% for my_item in Posts %}
+                        {% with title = my_item %}
+                            {% include "aPost.html"  %}
+                        {% endwith %}
+                    {% endfor %}
                 </div>
             </div>
         </div>
@@ -197,43 +163,3 @@
                 dont vape lol, yall should stop and then this wouldnt be such an issue so yeah put down your blueberry mango puffer
             </div>
         </div>-->
-
-        
-
-        
-        
-
-
-
-
-
-
-
-
-
-    </div>
-    <div id = 'SideMenu'>
-        <button>Home</button>
-        <button>Browse</button>
-        <button>My Projects</button>
-        <button>Notifications</button>
-        <button>Messages</button>
-        <button>Saved Projects</button>
-        <button>Profile</button>
-    </div>
-    <script src = "{{ url_for('static', filename='js/jquery-3.6.1.js')}}" ></script>
-    <script src = "{{ url_for('static', filename='js/main.js')}}" ></script>
-</body>
-=======
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
->>>>>>> 0af9d13df54fd0c061e46d35c59e640dd76acd87
-</html>

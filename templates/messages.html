@@ -1,0 +1,12 @@
+<div id="content">
+    <button>New Message</button>
+    <div id = "messages">
+        {% for my_item in Messages %}
+            {% for description in Messages[my_item] %}
+                {% with title = my_item %}
+                    {% include "aMessage.html"  %}
+                {% endwith %}
+            {% endfor %}
+        {% endfor %}
+    </div>
+</div>

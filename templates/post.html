@@ -1,33 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/css/styles.css" />
     <link rel="stylesheet" href="../static/css/post.css" />
-    <link rel="stylesheet" href="../static/css/sidebar.css" />
-    <title>Document</title>
-</head>
-<body>
     <div id = "page">
-        <form action="/newPost" method="post">
+        <form action="/newPost" method="post" enctype="multipart/form-data">
             <label for="title">Title:</label>
-            <input type="text" id="title" name="title" autocomplete="off"><br>
+            <input type="text" id="title" name="title" autocomplete="off" required><br>
             <label for="image">Image:</label>
-            <input type="file" id="image" name="image" accept="image/*"><br>
+            <input type="file" id="image" name="image" accept="image/*" required><br>
             <label for="description">Description:</label><br>
-            <textarea id="description" name="description"></textarea><br>
+            <textarea id="description" name="description" required></textarea><br>
             <input type="submit">
         </form>
     </div>
-    <div id = 'SideMenu'>
-        <button>Home</button>
-        <button>Browse</button>
-        <button>My Projects</button>
-        <button>Notifications</button>
-        <button>Messages</button>
-        <button>Saved Projects</button>
-        <button>Profile</button>
-    </div>
-</body>
-</html>
