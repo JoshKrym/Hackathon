@@ -20,15 +20,7 @@
         .bigGreyRec {
             width: 100%; /* Cover the entire width of the viewport */
             height: 100%; /* Cover the entire height of the viewport */
-            background-color: #F5F5F5; /* Set the background color to light grey */
-            z-index: -2;
-        }
-
-        .content-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
+            background-color: rgba(74, 67, 67, 0.203); /* Set the background color to light grey */
         }
 
         .lessBigWhiteRec{
@@ -36,31 +28,34 @@
             height: 400px; /* Set the height of the rectangle */
             background-color: white; /* Add a black border */
             position: absolute;
-            left: 30%;
-            bottom: 35%;
-            z-index: -2;
+            left: 50%; /* Center the element horizontally */
+            transform: translateX(-50%); /* Center it precisely */
+            bottom: 30%;
+            border-radius: 10px; /* Add this line to set rounded corners (optional) */
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add a shadow */
             }
 
         .title {
             font-size: 40px;
             position: absolute;
-            top: 12%; /* Adjust this value to control vertical position */
-            left: 37%; /* Adjust this value to control horizontal position */
+            left: 50%; /* Center the element horizontally */
+            transform: translateX(-50%); /* Center it precisely */
+            bottom: 80%;
             font-family: 'Nunito', sans-serif;
         }
 
         .userLabel, .passLabel{
             font-size: 20px;
             position: absolute;
-            left: 32%; /* Adjust this value to control horizontal position */
+            left: 6%; /* Center the element horizontally */
             font-family: 'Lato', sans-serif;
         }
 
         .userLabel{
-            bottom: 71%; /* Adjust this value to control vertical position */    
+            bottom: 63.5%; /* Adjust this value to control vertical position */    
         }
         .passLabel{
-            bottom: 57%; /* Adjust this value to control vertical position */
+            bottom: 38.5%; /* Adjust this value to control vertical position */
         }
 
         .rectangleUser, .rectanglePass {
@@ -69,78 +64,100 @@
             height: 50px; /* Set the height of the rectangle */
             border: 2px solid black; /* Add a black border */
             position: absolute;
-            left: 32%;
+            left: 50%; /* Center the element horizontally */
+            transform: translateX(-50%); /* Center it precisely */
         }
         .rectangleUser{
-            bottom: 63%;
+            bottom: 50%;
         }
         .rectanglePass{
-            bottom: 49%;
+            bottom: 25%;
         }
         
-        .loginButton{
-            font-size: 24px;
-            position: absolute;
-            left: 45%; /* Adjust this value to control horizontal position */
-            font-family: 'Lato', sans-serif;   
-            bottom: 40%; 
-            color: white;
-        }
+        .loginRectangle {
+            display: flex;  /* Convert the container to a flex container */
+            justify-content: center; /* Center child elements horizontally */
+            align-items: center; /* Center child elements vertically */
 
-        .loginRectangle{
+            /* Your existing styles: */
             width: 350px;
             height: 48px;
             position: absolute;
-            left: 32%;
-            background-color: #1877F2;
+            left: 50%; /* Center the element horizontally */
+            transform: translateX(-50%); /* Center it precisely */
+            background-color: #6b42e8;
             border-radius: 20px; /* Add this line to set rounded corners (optional) */
-            bottom: 38.5%;
-            z-index: -1;
+            bottom: 8%;
+        }
+        .loginRectangle button {
+            font-size: 24px;
+            font-family: 'Lato', sans-serif;
+            color: rgb(255, 255, 255);
+            width: 100%;
+            height: 100%;
+            border: none;
+            background: transparent;
+            cursor: pointer;  /* Makes it clear it's a clickable button */
+            outline: none;  /* Removes the blue outline when the button is clicked or focused */
+            text-align: center;  /* Optional: If you want to make sure the text is centered */
+        }
+
+        /* Changes the rectangle color when hovered */
+        .loginRectangle:hover {
+            background-color: #9c8ecd;  /* This is a slightly lighter shade of the original color for demonstration. Adjust as needed. */
+        }
+
+        /* Changes the button text color when hovered */
+        .loginRectangle button:hover {
+            color: #ccc;  /* This is a slightly darker shade of white for demonstration. Adjust as needed. */
         }
 
 
         .signUp{
             font-size: 20px;
             position: absolute;
-            left: 35%;
-            bottom: 25%;
+            left: 50%; /* Center the element horizontally */
+            transform: translateX(-50%); /* Center it precisely */
+            bottom: 22%;
+        }
+
+        .signUpLink:hover{
+            color: #ccc
         }
     </style>
 <body>
 
     <div class="bigGreyRec">
-    </div>
+    
 
-    <div class="content-container">
         <div class="lessBigWhiteRec">
-        </div>
-        <div class="title">
-            FreelanceMed
-        </div>
+            <div class="title">
+                FreelanceMed
+            </div>
+    
+            <div class="userLabel">
+                Username
+            </div>
+            <div class="passLabel">
+                Password
+            </div>
+    
+            <div class="rectangleUser">
+            </div>
+            <div class="rectanglePass">
+            </div>
+    
+            
+            <div class="loginRectangle">
+                <button onclick="window.location.href='home.html'">Log In</button>
+            </div>
+        
+        </div><!-- end whiteRec -->
 
-        </body>
-
-        <div class="userLabel">
-            Username
-        </div>
-        <div class="passLabel">
-            Password
-        </div>
-
-        <div class="rectangleUser">
-        </div>
-        <div class="rectanglePass">
-        </div>
-
-        <div class="loginButton">
-            Log in
-        </div>
-        <div class="loginRectangle">
-        </div>
-
-        <div class="signUp">
-            Don't have an account? <a href="createAccount.html">Sign up</a>
-        </div>
+        
+    </div>
+    <div class="signUp">
+        Don't have an account? <a href="createAccount.html" class = "signUpLink">Sign up</a>
     </div>
 
 </body>
