@@ -12,9 +12,42 @@ app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
 
 @app.route('/')
-def main():
-    session['username'] = 'Josh'
+def login():
+    #session['username'] = 'Josh'
+    return render_template('/login.html')
+
+@app.route('/createAccount.html')
+def createAccount():
+    #session['username'] = 'Josh'
+    return render_template('/createAccount.html')
+
+@app.route('/verifyUser', methods=['POST'])
+def verifyUser():
+    UsersFile = open('Users.json', 'r')
+    Users = json.loads(UsersFile.read())
+    print(request.form)
+    print(Users[request.form['Username']])
+    print(request.form['Password'])
+    if(Users[request.form['Username']] == request.form['Password']):
+        session['username'] = request.form['Username']
+        return redirect('/home.html')
+    return "you got your fucking password wrong dumbass"
+
+@app.route('/home.html')
+def home():
     return render_template('/home.html')
+
+@app.route('/createUser', methods=['POST'])
+def createUser():
+    print(request.form)
+    UserPassDict = {request.form['Username']:request.form['Password']}
+    UsersFile = open('Users.json', 'r+')
+    Users = json.loads(UsersFile.read())
+    Users[request.form['Username']] = request.form['Password']
+    UsersFile.seek(0,0)
+    UsersFile.write(json.dumps(Users))
+    session['username'] = request.form['Username']
+    return redirect('/home.html')
 
 @app.route('/post.html')
 def post():
